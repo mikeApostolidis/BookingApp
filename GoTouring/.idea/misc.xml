@@ -3,6 +3,25 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.1025" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/drawable/ic_baseline_account_box_24.xml" value="0.1785" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/drawable/ic_baseline_home_24.xml" value="0.1785" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1785" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/drawable/ic_menu_camera.xml" value="0.1025" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/drawable/ic_menu_gallery.xml" value="0.1025" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/drawable/ic_menu_slideshow.xml" value="0.1025" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/drawable/side_nav_bar.xml" value="0.1025" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/layout/app_bar_navigate.xml" value="0.1" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/layout/content_navigate.xml" value="0.1" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/layout/fragment_gallery.xml" value="0.1" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/layout/fragment_home.xml" value="0.1" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/layout/fragment_slideshow.xml" value="0.1" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/layout/nav_header.xml" value="0.14130434782608695" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/layout/nav_header_navigate.xml" value="0.1" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/layout/recyclerview_item.xml" value="0.14130434782608695" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/menu/navigate.xml" value="0.22083333333333333" />
+        <entry key="..\:/Github projects/BookingApp/GoTouring/app/src/main/res/menu/navigation_menu.xml" value="0.25" />
         <entry key="..\:/Users/Mike/Documents/GitHub/BookingApp/GoTouring/app/src/main/res/layout/activity_main.xml" value="0.33" />
       </map>
     </option>
