@@ -2,4 +2,6 @@
     <string name="app_name">GoTouringV2</string>
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_home_fragment">Hello Home fragment</string>
 </resources>

@@ -4,15 +4,19 @@
     tools:ignore="HardcodedText">
 
     <item
-        android:id="@+id/nav_account"
-        android:title="My Account" />
+        android:id="@+id/nav_home"
+        android:title="Home" />
 
     <item
-        android:id="@+id/nav_settings"
-        android:title="Settings" />
+        android:id="@+id/nav_insert"
+        android:title="Insert" />
 
     <item
-        android:id="@+id/nav_logout"
-        android:title="Logout" />
+        android:id="@+id/nav_delete"
+        android:title="Delete" />
+
+    <item
+        android:id="@+id/nav_update"
+        android:title="Update" />
 
 </menu>

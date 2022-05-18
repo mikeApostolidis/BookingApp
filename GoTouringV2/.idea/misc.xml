@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/Mike/Documents/GitHub/BookingApp/GoTouringV2/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/Mike/Documents/GitHub/BookingApp/GoTouringV2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Mike/Documents/GitHub/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_delete.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Mike/Documents/GitHub/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_home.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/Mike/Documents/GitHub/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_insert.xml" value="0.2151268115942029" />
+        <entry key="..\:/Users/Mike/Documents/GitHub/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_query.xml" value="0.23645833333333333" />
+        <entry key="..\:/Users/Mike/Documents/GitHub/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_update.xml" value="0.23645833333333333" />
         <entry key="..\:/Users/Mike/Documents/GitHub/BookingApp/GoTouringV2/app/src/main/res/menu/navigation_menu.xml" value="0.30512820512820515" />
       </map>
     </option>

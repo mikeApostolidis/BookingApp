@@ -1,11 +1,12 @@
 package com.example.gotouringv2.Entities;
 
+import androidx.room.Dao;
 import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import java.util.List;
-
+@Dao
 public interface TravelGuideDao {
     @Insert
     public void insertTravelAgency(TravelAgency travelAgency);

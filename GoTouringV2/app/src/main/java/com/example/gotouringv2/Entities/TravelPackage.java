@@ -6,8 +6,8 @@ import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 
 @Entity
-        (tableName = "Package",
-       primaryKeys = {"id","Agency_Id","TripId"},
+        (tableName = "TravelPackage",
+       primaryKeys = {"id","Agency_Id","Trip_Id"},
         foreignKeys = {
         @ForeignKey(entity=TripInfo.class,
                         parentColumns="id",
@@ -21,7 +21,7 @@ import androidx.room.PrimaryKey;
                         onUpdate = ForeignKey.CASCADE)})
 public class TravelPackage {
 
-    @PrimaryKey
+
     private int id;
 
     @ColumnInfo(name = "Agency_Id")
