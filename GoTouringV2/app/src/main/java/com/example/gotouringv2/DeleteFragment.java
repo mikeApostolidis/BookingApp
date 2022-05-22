@@ -7,6 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.gotouringv2.Entities.TravelAgency;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +19,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class DeleteFragment extends Fragment {
+    EditText editTextdel;
+    Button deluser;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +66,27 @@ public class DeleteFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_delete, container, false);
+
+        View view = inflater.inflate(R.layout.fragment_delete, container, false);
+        editTextdel = view.findViewById(R.id.editTextdel);
+        deluser = view.findViewById(R.id.deluser);
+        deluser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int Var_userid = 0;
+                try {
+                    Var_userid = Integer.parseInt(editTextdel.getText().toString());
+                } catch (NumberFormatException ex) {
+                    System.out.println("Could not parse " + ex);
+                }
+                TravelAgency travelAgency = new TravelAgency();
+                travelAgency.setId(Var_userid);
+                MainActivity.travelGuideDatabase.travelGuideDao().deleteTravelAgency(travelAgency);
+                Toast.makeText(getActivity(),"User deleted ",Toast.LENGTH_LONG).show();
+                editTextdel.setText("");
+
+            }
+        });
+        return view;
     }
 }

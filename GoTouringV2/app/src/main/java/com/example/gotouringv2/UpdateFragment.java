@@ -7,6 +7,12 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.gotouringv2.Entities.TravelAgency;
+
 
 /**
  * A simple {@link Fragment} subclass.
@@ -14,6 +20,8 @@ import android.view.ViewGroup;
  * create an instance of this fragment.
  */
 public class UpdateFragment extends Fragment {
+    EditText upeditText1,upeditText2,upeditText3;
+    Button updateuser;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,6 +67,39 @@ public class UpdateFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_update, container, false);
+        View view = inflater.inflate(R.layout.fragment_update, container, false);
+        upeditText1 = view.findViewById(R.id.upeditText1);
+        upeditText2 = view.findViewById(R.id.upeditText2);
+        upeditText3 = view.findViewById(R.id.upeditText3);
+        updateuser = view.findViewById(R.id.updateuser);
+        updateuser.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int Var_userid = 0;
+                try {
+                    Var_userid = Integer.parseInt(upeditText1.getText().toString());
+                } catch (NumberFormatException ex) {
+                    System.out.println("Could not parse " + ex);
+                }
+                String Var_agencyname = upeditText2.getText().toString();
+                String Var_agencyaddress = upeditText3.getText().toString();
+                try{
+                    TravelAgency travelagency = new TravelAgency();
+                    travelagency.setId(Var_userid);
+                    travelagency.setName(Var_agencyname);
+                    travelagency.setAddress(Var_agencyaddress);
+                    MainActivity.travelGuideDatabase.travelGuideDao().updateTravelAgency(travelagency);
+                    Toast.makeText(getActivity(),"One record updated!",Toast.LENGTH_LONG).show();
+                }catch(Exception e){
+                    String message = e.getMessage();
+                    Toast.makeText(getActivity(),message,Toast.LENGTH_LONG).show();
+                }
+
+                upeditText1.setText("");
+                upeditText2.setText("");
+                upeditText3.setText("");
+            }
+        });
+        return view;
     }
 }

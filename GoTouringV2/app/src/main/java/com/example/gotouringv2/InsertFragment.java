@@ -7,6 +7,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.gotouringv2.Entities.TravelAgency;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -15,6 +20,8 @@ import android.view.ViewGroup;
  */
 public class InsertFragment extends Fragment {
 
+    EditText editText1,editText2,editText3;
+    Button addbutton;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -59,6 +66,41 @@ public class InsertFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_insert, container, false);
+        View view = inflater.inflate(R.layout.fragment_insert, container, false);
+        editText1 = view.findViewById(R.id.editText1);
+        editText2 = view.findViewById(R.id.editText2);
+        editText3 = view.findViewById(R.id.editText3);
+
+        addbutton = view.findViewById(R.id.submituser);
+        addbutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int Var_userid = 0;
+                try {
+                    Var_userid = Integer.parseInt(editText1.getText().toString());
+                } catch (NumberFormatException ex) {
+                    System.out.println("Could not parse " + ex);
+                }
+                String Var_agencyname = editText2.getText().toString();
+                String Var_agencyaddress = editText3.getText().toString();
+                //try catch gia elenxo id
+                try{
+                    TravelAgency travelagency = new TravelAgency();
+                    travelagency.setId(Var_userid);
+                    travelagency.setName(Var_agencyname);
+                    travelagency.setAddress(Var_agencyaddress);
+                    MainActivity.travelGuideDatabase.travelGuideDao().insertTravelAgency(travelagency);
+                    Toast.makeText(getActivity(),"Ola kala",Toast.LENGTH_LONG).show();
+                }catch (Exception e){
+                    String message =  e.getMessage();
+                    Toast.makeText(getActivity(),message,Toast.LENGTH_LONG).show();
+                }
+
+                editText1.setText("");
+                editText2.setText("");
+                editText3.setText("");
+            }
+        });
+        return view;
     }
 }

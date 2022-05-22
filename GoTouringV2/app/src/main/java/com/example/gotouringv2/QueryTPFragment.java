@@ -10,18 +10,18 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.example.gotouringv2.Entities.TravelAgency;
-import com.example.gotouringv2.Entities.TripInfo;
+import com.example.gotouringv2.Entities.TravelPackage;
 
 import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link QueryFragment#newInstance} factory method to
+ * Use the {@link QueryTPFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class QueryFragment extends Fragment {
+public class QueryTPFragment extends Fragment {
 
-    TextView txtquery;
+    TextView txtquery3;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,7 +31,7 @@ public class QueryFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public QueryFragment() {
+    public QueryTPFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +41,11 @@ public class QueryFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment QueryFragment.
+     * @return A new instance of fragment QueryTPFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static QueryFragment newInstance(String param1, String param2) {
-        QueryFragment fragment = new QueryFragment();
+    public static QueryTPFragment newInstance(String param1, String param2) {
+        QueryTPFragment fragment = new QueryTPFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,19 +67,22 @@ public class QueryFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_query, container, false);
-        txtquery = view.findViewById(R.id.txtquery);
+        txtquery3 = view.findViewById(R.id.txtquery);
 
-        List<TravelAgency> travelagency = MainActivity.travelGuideDatabase.travelGuideDao().getTravelAgencies();
+        List<TravelPackage> travelPackage = MainActivity.travelGuideDatabase.travelGuideDao().getTravelPackages();
         String result ="";
         String result2="";
-        for (TravelAgency i: travelagency) {
+        for (TravelPackage i: travelPackage) {
             int code = i.getId();
-            String name = i.getName();
-            String surname = i.getAddress();
-            result = result + "\n Id: " + code + "\n Name: " + name + "\n Address: " + surname + "\n";
+            int AgencyId=i.getAgencyId();
+            int tripId=i.getTripId();
+            String departureDate=i.getDepartureDate();
+            double packagePrice=i.getPrice();
+            result = result + "\nPackage Id: " +code+ "\nAgency Id: " +tripId+ "\nTrip  Id: " +AgencyId+ "\n" +
+                    "Departure Date: "+departureDate+"\nPackage Price: "+packagePrice+"\n";
         }
 
-        txtquery.setText(result);
+        txtquery3.setText(result);
         return view;
     }
 }

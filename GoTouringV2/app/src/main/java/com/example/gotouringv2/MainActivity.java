@@ -8,10 +8,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import android.os.Bundle;
 import android.view.MenuItem;
+
+import com.example.gotouringv2.Entities.TravelGuideDatabase;
 import com.google.android.material.navigation.NavigationView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.FragmentManager;
+import androidx.room.Room;
 
 import android.os.Bundle;
 import android.widget.Toast;
@@ -20,12 +23,17 @@ public class MainActivity extends AppCompatActivity {
     public DrawerLayout drawerLayout;
     NavigationView navigationView;
     public ActionBarDrawerToggle actionBarDrawerToggle;
-    //FragmentManager fragmentManager = new FragmentManager();
+    //metavliti tipou klasis travelguidedatabase
+    public static TravelGuideDatabase travelGuideDatabase;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        //dimiourgia db kai gemisma apo alli efarmogi
+        //logika axristo
+        travelGuideDatabase = Room.databaseBuilder(getApplicationContext(),TravelGuideDatabase.class,"TravelguideDB").allowMainThreadQueries().build();
 
         //an den yparxei to fragment container tote reutrn allios dimiourgei homeFragment
         if(findViewById(R.id.fragment_container)!=null){
@@ -61,25 +69,84 @@ public class MainActivity extends AppCompatActivity {
                 switch (menuItem.getItemId()){
                     case R.id.nav_home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).addToBackStack(null).commit();
-                        // menuItem.setChecked(true);
-                        displayMessage("open insert");
+                        menuItem.setChecked(true);
+                        displayMessage("open home");
                         drawerLayout.closeDrawers();
                         return true;
-                    case R.id.nav_insert:
+
+                    case R.id.nav_insertTA:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InsertFragment()).addToBackStack(null).commit();
                        // menuItem.setChecked(true);
-                        displayMessage("open insert");
+                        displayMessage("open insert Travel Agency");
                         drawerLayout.closeDrawers();
                         return true;
-                    case R.id.nav_delete:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeleteFragment()).addToBackStack(null).commit();
-                      //displayMessage("open delete");
+
+                    case R.id.nav_insertTP:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InsertTPFragment()).addToBackStack(null).commit();
+                        // menuItem.setChecked(true);
+                        displayMessage("open insert Travel Package");
                         drawerLayout.closeDrawers();
                         return true;
-                    case R.id.nav_update:
+
+                    case R.id.nav_insertTI:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InsertTIFragment()).addToBackStack(null).commit();
+                        // menuItem.setChecked(true);
+                        displayMessage("open insert Travel Info");
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.nav_updateTA:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new UpdateFragment()).addToBackStack(null).commit();
-                       // menuItem.setChecked(true);
-                        displayMessage("open update");
+                      // menuItem.setChecked(true);
+                        displayMessage("open update Travel Agency");
+                        drawerLayout.closeDrawers();
+                        return true;
+                    case R.id.nav_updateTP:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new UpdateTPFragment()).addToBackStack(null).commit();
+                        // menuItem.setChecked(true);
+                        displayMessage("open update Travel Package");
+                        drawerLayout.closeDrawers();
+                        return true;
+                    case R.id.nav_updateTI:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new UpdateTIFragment()).addToBackStack(null).commit();
+                        // menuItem.setChecked(true);
+                        displayMessage("open update Travel Info");
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.nav_deleteTA:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeleteFragment()).addToBackStack(null).commit();
+                        displayMessage("open delete Travel Agency");
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.nav_deleteTP:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeleteTPFragment()).addToBackStack(null).commit();
+                        displayMessage("open delete Travel Package");
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.nav_deleteTI:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeleteTIFragment()).addToBackStack(null).commit();
+                        displayMessage("open delete Travel Info");
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.nav_queryTA:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QueryFragment()).addToBackStack(null).commit();
+                        displayMessage("open query Travel Agency");
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.nav_queryTP:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QueryTPFragment()).addToBackStack(null).commit();
+                        displayMessage("open query Travel Package");
+                        drawerLayout.closeDrawers();
+                        return true;
+
+                    case R.id.nav_queryTI:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QueryTIFragment()).addToBackStack(null).commit();
+                        displayMessage("open query Travel Info");
                         drawerLayout.closeDrawers();
                         return true;
                 }

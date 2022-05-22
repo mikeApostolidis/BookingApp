@@ -16,12 +16,11 @@ import java.util.List;
 
 /**
  * A simple {@link Fragment} subclass.
- * Use the {@link QueryFragment#newInstance} factory method to
+ * Use the {@link QueryTIFragment#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class QueryFragment extends Fragment {
-
-    TextView txtquery;
+public class QueryTIFragment extends Fragment {
+ TextView txtquery2;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -31,7 +30,7 @@ public class QueryFragment extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    public QueryFragment() {
+    public QueryTIFragment() {
         // Required empty public constructor
     }
 
@@ -41,11 +40,11 @@ public class QueryFragment extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment QueryFragment.
+     * @return A new instance of fragment QueryTIFragment.
      */
     // TODO: Rename and change types and number of parameters
-    public static QueryFragment newInstance(String param1, String param2) {
-        QueryFragment fragment = new QueryFragment();
+    public static QueryTIFragment newInstance(String param1, String param2) {
+        QueryTIFragment fragment = new QueryTIFragment();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -67,19 +66,21 @@ public class QueryFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_query, container, false);
-        txtquery = view.findViewById(R.id.txtquery);
+        txtquery2 = view.findViewById(R.id.txtquery);
 
-        List<TravelAgency> travelagency = MainActivity.travelGuideDatabase.travelGuideDao().getTravelAgencies();
+        List<TripInfo> tripInfo = MainActivity.travelGuideDatabase.travelGuideDao().getTripInfos();
         String result ="";
-        String result2="";
-        for (TravelAgency i: travelagency) {
+
+        for (TripInfo i: tripInfo) {
             int code = i.getId();
-            String name = i.getName();
-            String surname = i.getAddress();
-            result = result + "\n Id: " + code + "\n Name: " + name + "\n Address: " + surname + "\n";
+            String city = i.getCity();
+            String country = i.getCountry();
+            String duration =i.getTripduration();
+            String type = i.getTriptype();
+            result = result + "\n Id: " + code + "\n city: " + city + "\n country: " + country + "\n Duration: " + duration +"\nType: "+type+"\n" ;
         }
 
-        txtquery.setText(result);
+        txtquery2.setText(result);
         return view;
     }
 }

@@ -3,20 +3,73 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="HardcodedText">
 
-    <item
+
+   <item
         android:id="@+id/nav_home"
-        android:title="Home" />
+        android:title="Home"
+        android:icon="@drawable/ic_baseline_home_24" />
 
     <item
-        android:id="@+id/nav_insert"
-        android:title="Insert" />
+        android:id="@+id/nav_insertTA"
+        android:title="Insert Travel Agency"
+        android:icon="@drawable/ic_baseline_add_24"/>
+    <item
+        android:id="@+id/nav_updateTA"
+        android:title="Update Travel Agency"
+        android:icon="@drawable/ic_baseline_update_24"/>
 
     <item
-        android:id="@+id/nav_delete"
-        android:title="Delete" />
+        android:id="@+id/nav_queryTA"
+        android:title="Query Travel Agency"
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"/>
+    <item
+        android:id="@+id/nav_deleteTA"
+        android:title="Delete Travel Agency"
+        android:icon="@drawable/ic_baseline_delete_24"/>
+
+
+
 
     <item
-        android:id="@+id/nav_update"
-        android:title="Update" />
+        android:id="@+id/nav_insertTI"
+        android:title="Insert Travel Info"
+        android:icon="@drawable/ic_baseline_add_24"/>
+
+    <item
+        android:id="@+id/nav_updateTI"
+        android:title="Update Travel Info"
+        android:icon="@drawable/ic_baseline_update_24"/>
+
+    <item
+        android:id="@+id/nav_queryTI"
+        android:title="Query Travel Info"
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"/>
+
+    <item
+        android:id="@+id/nav_deleteTI"
+        android:title="Delete Travel Info"
+        android:icon="@drawable/ic_baseline_delete_24"/>
+
+
+    <item
+        android:id="@+id/nav_insertTP"
+        android:title="Insert Travel Package"
+        android:icon="@drawable/ic_baseline_add_24"/>
+    <item
+        android:id="@+id/nav_updateTP"
+        android:title="Update Travel Package"
+        android:icon="@drawable/ic_baseline_update_24"/>
+    <item
+        android:id="@+id/nav_queryTP"
+        android:title="Query Travel Package"
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"/>
+    <item
+        android:id="@+id/nav_deleteTP"
+        android:title="Delete Travel Package"
+        android:icon="@drawable/ic_baseline_delete_24"/>
+
+
+
+
 
 </menu>

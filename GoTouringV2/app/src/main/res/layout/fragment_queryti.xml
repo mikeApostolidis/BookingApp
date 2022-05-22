@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ScrollView
-    tools:context=".QueryFragment"
+    tools:context=".QueryTIFragment"
     android:layout_height="match_parent"
     android:layout_width="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
@@ -10,15 +10,13 @@
     <!-- TODO: Update blank fragment layout -->
 
 
-
     <TextView
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:layout_margin="50dp"
+        android:layout_margin="24dp"
         android:text="Query Result"
-        android:id="@+id/txtquery"/>
-
+        android:id="@+id/txtquery2"/>
 
 </ScrollView>

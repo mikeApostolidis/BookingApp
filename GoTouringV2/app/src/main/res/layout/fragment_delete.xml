@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
     <LinearLayout
     tools:context=".DeleteFragment"
     android:orientation="vertical"
@@ -16,15 +15,15 @@
         android:textStyle="bold"
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
-        android:text="DELETE RECORD"
-        android:id="@+id/textView"/>
+        android:text="DELETE TRAVEL AGENCY "
+        android:id="@+id/textDelete1"/>
 
     <EditText
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:id="@+id/editTextdel"
         android:hint="insert id"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:ems="10"/>
 
     <Button
