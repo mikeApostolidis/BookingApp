@@ -7,7 +7,13 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemSelectedListener;
+import android.view.View.OnClickListener;
 
 import com.example.gotouringv2.Entities.TravelAgency;
 import com.example.gotouringv2.Entities.TravelPackage;
@@ -21,7 +27,12 @@ import java.util.List;
  */
 public class QueryTPFragment extends Fragment {
 
+    Spinner spinner;
     TextView txtquery3;
+   ArrayAdapter<CharSequence> adapter;
+    Button buttonQuery;
+    int temp;
+
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -66,23 +77,77 @@ public class QueryTPFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_query, container, false);
-        txtquery3 = view.findViewById(R.id.txtquery);
+        View view = inflater.inflate(R.layout.fragment_querytp, container, false);
+        txtquery3 = view.findViewById(R.id.txtquery3);
+        spinner = view.findViewById(R.id.spinner);
+        buttonQuery = view.findViewById(R.id.buttonQuery);
+        adapter = ArrayAdapter.createFromResource(getContext(), R.array.querries_array, R.layout.support_simple_spinner_dropdown_item );//, R.layout.support_simple_spinner_dropdown_item);
+        adapter.setDropDownViewResource(R.layout.support_simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
 
-        List<TravelPackage> travelPackage = MainActivity.travelGuideDatabase.travelGuideDao().getTravelPackages();
-        String result ="";
-        String result2="";
-        for (TravelPackage i: travelPackage) {
-            int code = i.getId();
-            int AgencyId=i.getAgencyId();
-            int tripId=i.getTripId();
-            String departureDate=i.getDepartureDate();
-            double packagePrice=i.getPrice();
-            result = result + "\nPackage Id: " +code+ "\nAgency Id: " +tripId+ "\nTrip  Id: " +AgencyId+ "\n" +
-                    "Departure Date: "+departureDate+"\nPackage Price: "+packagePrice+"\n";
-        }
 
-        txtquery3.setText(result);
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+           public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
+
+               temp=position+1;
+           }
+               @Override
+               public void onNothingSelected(AdapterView<?> parent) {}
+        });
+
+        buttonQuery.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //txtquery3.setText("temp"+temp);
+                String result = "";
+//Den leitourgei to case 2 3 4
+                switch (temp){
+                    case 1:
+                        List<TravelPackage> travelPackage1 = MainActivity.travelGuideDatabase.travelGuideDao().getTravelPackages();
+                        for (TravelPackage i : travelPackage1) {
+                            int code = i.getId();
+                            int AgencyId = i.getAgencyId();
+                            int tripId = i.getTripId();
+                            String departureDate = i.getDepartureDate();
+                            double packagePrice = i.getPrice();
+                            result = result + "\nPackage Id: " + code + "\nAgency Id: " + tripId + "\nTrip  Id: " + AgencyId + "\n" +
+                                    "Departure Date: " + departureDate + "\nPackage Price: " + packagePrice + "\n";
+                        }
+                        txtquery3.setText(result);
+                        break;
+
+                    case 2:
+                        //List<TravelPackage> travelPackage = MainActivity.travelGuideDatabase.travelGuideDao().getTravelPackages();
+                        List<Integer> integers = MainActivity.travelGuideDatabase.travelGuideDao().getQueryMostAgencies();
+                        for(Integer i: integers)
+                        {
+                            result = result + "\n Most famous Agency "+ i +"\n";
+                        }
+                        txtquery3.setText(result);
+                        break;
+                    case 3:
+                        //List<TravelPackage> travelPackage = MainActivity.travelGuideDatabase.travelGuideDao().getTravelPackages();
+                        List<Integer> integers1 = MainActivity.travelGuideDatabase.travelGuideDao().getQueryMostPickedTrip();
+                        for(Integer i: integers1)
+                        {
+                            result = result + "\n Most Trip "+ i +"\n";
+                        }
+                        txtquery3.setText(result);
+                        break;
+                    case 4:
+                        //List<TravelPackage> travelPackage = MainActivity.travelGuideDatabase.travelGuideDao().getTravelPackages();
+                        List<Double> doubles = MainActivity.travelGuideDatabase.travelGuideDao().getQueryCheapestTrip();
+                        for(Double i: doubles)
+                        {
+                            result = result + "\n Least expensive Trip "+ i +"\n";
+                        }
+                        txtquery3.setText(result);
+                        break;
+
+                }
+            }
+        });
         return view;
     }
 }

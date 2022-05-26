@@ -2,12 +2,15 @@ package com.example.gotouringv2.Entities;
 
 import androidx.room.Dao;
 import androidx.room.Delete;
+import androidx.room.Entity;
 import androidx.room.Insert;
 import androidx.room.Query;
 import androidx.room.Update;
 import java.util.List;
 @Dao
 public interface TravelGuideDao {
+
+
     @Insert
     public void insertTravelAgency(TravelAgency travelAgency);
 
@@ -43,4 +46,28 @@ public interface TravelGuideDao {
 
     @Query("select * from travelpackage")
     public List<TravelPackage> getTravelPackages();
+
+
+// kanena apo ta tria den leitourgei
+    @Query("select count(TP.Agency_Id) as MostWanted "+
+    " from travelpackage TP "+
+    " group by TP.Agency_Id "+
+    " order by MostWanted desc")
+    public List<Integer> getQueryMostAgencies();
+
+
+    @Query("select count(TP.Trip_Id) as MostWanted "+
+            " from travelpackage TP "+
+            " group by TP.Trip_Id "+
+            " order by MostWanted desc")
+    public List<Integer> getQueryMostPickedTrip();
+
+    @Query("select count(TP.Package_price) as Cheapest "+
+            " from travelpackage TP "+
+            " group by TP.Package_price"+
+            " order by Cheapest desc")
+    public List<Double> getQueryCheapestTrip();
+
+
+
 }

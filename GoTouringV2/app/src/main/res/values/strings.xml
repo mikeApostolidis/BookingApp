@@ -1,4 +1,12 @@
 <resources>
+
+    <string-array name="querries_array">
+        <item>Show all</item>
+        <item>Show the most picked Agency</item>
+        <item>Show the most picked Trip</item>
+        <item>Show the cheapest Trip</item>
+
+    </string-array>
     <string name="app_name">GoTouringV2</string>
     <string name="nav_open">Open</string>
     <string name="nav_close">Close</string>

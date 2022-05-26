@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     xmlns:tools="http://schemas.android.com/tools"
     tools:ignore="HardcodedText">
 
 
-   <item
+
+    <item
+        android:id="@+id/navigation_drawer_item3"
+        android:icon="@android:drawable/ic_menu_share"
+        android:title=""
+        app:actionLayout="@layout/spinner"/>
+
+    <item
         android:id="@+id/nav_home"
         android:title="Home"
         android:icon="@drawable/ic_baseline_home_24" />
