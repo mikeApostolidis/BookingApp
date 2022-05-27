@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "62674688381",
+    "firebase_url": "https://gotouring-28f39-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "gotouring-28f39",
+    "storage_bucket": "gotouring-28f39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:62674688381:android:4d74e29100a44ac5e7d414",
+        "android_client_info": {
+          "package_name": "com.example.gotouringv2"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "62674688381-mbgolha30s1gl7iuvqem6u1hktakp4d1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9R6nGmQpMcVA7EL3hQiNgDhrOuxF9lws"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "62674688381-mbgolha30s1gl7iuvqem6u1hktakp4d1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

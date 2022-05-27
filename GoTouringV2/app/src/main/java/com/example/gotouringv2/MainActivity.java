@@ -1,5 +1,6 @@
 package com.example.gotouringv2;
 
+import android.app.FragmentManager;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -8,18 +9,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.drawerlayout.widget.DrawerLayout;
 import android.os.Bundle;
 import android.view.MenuItem;
-
 import com.example.gotouringv2.Entities.TravelGuideDatabase;
 import com.google.android.material.navigation.NavigationView;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentContainer;
 import androidx.room.Room;
 
-import android.os.Bundle;
-import android.widget.Toast;
-
 public class MainActivity extends AppCompatActivity {
+    public static FragmentManager fragmentManager;
     public DrawerLayout drawerLayout;
     NavigationView navigationView;
     public ActionBarDrawerToggle actionBarDrawerToggle;
@@ -37,13 +34,17 @@ public class MainActivity extends AppCompatActivity {
 
         //an den yparxei to fragment container tote reutrn allios dimiourgei homeFragment
         if(findViewById(R.id.fragment_container)!=null){
-            if(savedInstanceState!=null)
+            if(savedInstanceState!=null){
                 return;
+            }
+
         }
 
         //dimiourgia me fragmentmanager kai gemisma me home fragment
         HomeFragment homeFragment = new HomeFragment();
+        //        CustomerManageFragment cm=new CustomerManageFragment();
         getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, homeFragment).commit();
+        //getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, cm).commit();
 
 
 
@@ -146,6 +147,11 @@ public class MainActivity extends AppCompatActivity {
 
                     case R.id.nav_queryTI:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QueryTIFragment()).addToBackStack(null).commit();
+                        displayMessage("open query Travel Info");
+                        drawerLayout.closeDrawers();
+                        return true;
+                    case R.id.nav_Customer_management:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CustomerManageFragment()).addToBackStack(null).commit();
                         displayMessage("open query Travel Info");
                         drawerLayout.closeDrawers();
                         return true;
