@@ -1,10 +1,25 @@
 <resources>
 
+
+    <string-array name="querriesTA_array">
+    <item>Show all</item>
+    <item>Show the id of Agencies that start from "J"</item>
+    </string-array>
+
+
     <string-array name="querries_array">
-        <item>Show all</item>
-        <item>Show the most picked Agency</item>
-        <item>Show the most picked Trip</item>
-        <item>Show the cheapest Trip</item>
+        <item>1:Show all Travel Agency</item>
+        <item>2:Show all Trip Info</item>
+        <item>3:Show all Travel Package</item>
+        <item>4:Show Agency that provides only plane</item>
+        <item>5:Show ID of package with bus</item>
+        <item>6:Show the most picked city</item>
+        <item>7:Show the cheapest Trip ascending order</item>
+        <item>8:Show the Agencies that have a trip on "4/5/2022"</item>
+        <item>9:Show the most expensive Trip</item>
+        <item>10:Show the Agency that starts with J</item>
+        <item>11:Show the country that has the most trips</item>
+        <item>12:Show the average of prices</item>
 
     </string-array>
     <string name="app_name">GoTouringV2</string>

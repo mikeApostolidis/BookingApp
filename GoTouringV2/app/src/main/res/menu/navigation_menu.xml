@@ -28,7 +28,7 @@
 
     <item
         android:id="@+id/nav_queryTA"
-        android:title="Query Travel Agency"
+        android:title="Data and Queries"
         android:icon="@drawable/ic_baseline_remove_red_eye_24"/>
     <item
         android:id="@+id/nav_deleteTA"
@@ -48,10 +48,10 @@
         android:title="Update Travel Info"
         android:icon="@drawable/ic_baseline_update_24"/>
 
-    <item
+  <!--  <item
         android:id="@+id/nav_queryTI"
         android:title="Query Travel Info"
-        android:icon="@drawable/ic_baseline_remove_red_eye_24"/>
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"/> -->
 
     <item
         android:id="@+id/nav_deleteTI"
@@ -67,10 +67,11 @@
         android:id="@+id/nav_updateTP"
         android:title="Update Travel Package"
         android:icon="@drawable/ic_baseline_update_24"/>
-    <item
+
+  <!--  <item
         android:id="@+id/nav_queryTP"
         android:title="Query Travel Package"
-        android:icon="@drawable/ic_baseline_remove_red_eye_24"/>
+        android:icon="@drawable/ic_baseline_remove_red_eye_24"/> -->
     <item
         android:id="@+id/nav_deleteTP"
         android:title="Delete Travel Package"
@@ -78,7 +79,7 @@
     <item
         android:id="@+id/nav_Customer_management"
         android:title="Customer management menu"
-        android:icon="@drawable/ic_baseline_delete_24"/>
+        android:icon="@drawable/ic_baseline_extension_24"/>
 
 
 

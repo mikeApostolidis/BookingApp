@@ -66,7 +66,7 @@ public class QueryTIFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(R.layout.fragment_query, container, false);
-        txtquery2 = view.findViewById(R.id.txtquery);
+        txtquery2 = view.findViewById(R.id.txtquery3);
 
         List<TripInfo> tripInfo = MainActivity.travelGuideDatabase.travelGuideDao().getTripInfos();
         String result ="";

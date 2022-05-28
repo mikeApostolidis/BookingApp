@@ -138,8 +138,8 @@ public class MainActivity extends AppCompatActivity {
                         displayMessage("open query Travel Agency");
                         drawerLayout.closeDrawers();
                         return true;
-
-                    case R.id.nav_queryTP:
+//pleon monop ena query xreiazetai alla ta afinw se comments just in case
+             /*       case R.id.nav_queryTP:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QueryTPFragment()).addToBackStack(null).commit();
                         displayMessage("open query Travel Package");
                         drawerLayout.closeDrawers();
@@ -149,7 +149,7 @@ public class MainActivity extends AppCompatActivity {
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QueryTIFragment()).addToBackStack(null).commit();
                         displayMessage("open query Travel Info");
                         drawerLayout.closeDrawers();
-                        return true;
+                        return true; */
                     case R.id.nav_Customer_management:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CustomerManageFragment()).addToBackStack(null).commit();
                         displayMessage("open query Travel Info");

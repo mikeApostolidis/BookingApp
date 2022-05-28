@@ -30,7 +30,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
     <EditText
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:id="@+id/upeditTextTP3"
+        android:id="@+id/upeditTextTP2"
         android:hint="Insert Agency Id"
         android:inputType="number"
         android:ems="10"/>
@@ -38,7 +38,7 @@ xmlns:android="http://schemas.android.com/apk/res/android">
 <EditText
     android:layout_height="wrap_content"
     android:layout_width="match_parent"
-    android:id="@+id/upeditTextTP2"
+    android:id="@+id/upeditTextTP3"
     android:inputType="number"
     android:hint="Insert Trip Id"
     android:ems="10"/>

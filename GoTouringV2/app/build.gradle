@@ -1,12 +1,19 @@
 plugins {
     id 'com.android.application'
-    id 'com.google.gms.google-services'
+    //bgazei error otan to exo
+    //id 'com.google.gms.google-services'
+
 }
 
 android {
     compileSdk 32
 
     defaultConfig {
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments += ["room.schemaLocation": "$projectDir/schemas".toString()]
+            }
+        }
         applicationId "com.example.gotouringv2"
         minSdk 30
         targetSdk 32

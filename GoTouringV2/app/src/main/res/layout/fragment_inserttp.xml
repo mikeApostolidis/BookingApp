@@ -31,7 +31,7 @@
     <EditText
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:id="@+id/editTextINSTP3"
+        android:id="@+id/editTextINSTP2"
         android:inputType="number"
         android:hint="Insert Agency id"
         android:ems="10"/>
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         android:inputType="number"
-        android:id="@+id/editTextINSTP2"
+        android:id="@+id/editTextINSTP3"
         android:hint="Insert Trip Id"
         android:ems="10"/>
 

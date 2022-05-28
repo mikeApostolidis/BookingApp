@@ -102,8 +102,6 @@ public class UpdateTIFragment extends Fragment {
                     Toast.makeText(getActivity(),message,Toast.LENGTH_LONG).show();
                 }
 
-
-
                 upeditTextTI1.setText("");
                 upeditTextTI2.setText("");
                 upeditTextTI3.setText("");

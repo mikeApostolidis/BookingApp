@@ -100,8 +100,6 @@ public class UpdateTPFragment extends Fragment {
                 }
 
 
-
-
                 String Departure_Date = upeditTextTP4.getText().toString();
 
                 int  Package_price = 0;
@@ -122,12 +120,11 @@ public class UpdateTPFragment extends Fragment {
 
 
                     MainActivity.travelGuideDatabase.travelGuideDao().updateTravelPackage(travelPackage);
-                    Toast.makeText(getActivity(), "Ola kala", Toast.LENGTH_LONG).show();
+                    Toast.makeText(getActivity(), "One record Updated", Toast.LENGTH_LONG).show();
                 }catch(Exception e){
                     String message = e.getMessage();
                     Toast.makeText(getActivity(),message,Toast.LENGTH_LONG).show();
                 }
-
 
                 upeditTextTP1.setText("");
                 upeditTextTP2.setText("");

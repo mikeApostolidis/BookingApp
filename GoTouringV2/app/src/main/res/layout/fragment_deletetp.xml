@@ -21,8 +21,24 @@
     <EditText
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
-        android:id="@+id/editTextdel2"
-        android:hint="insert id"
+        android:id="@+id/editTextdelTP2"
+        android:hint="insert travel package id"
+        android:inputType="number"
+        android:ems="10"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/editTextdelTA2"
+        android:hint="insert agency id"
+        android:inputType="number"
+        android:ems="10"/>
+
+    <EditText
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/editTextdelTI2"
+        android:hint="insert trip info id"
         android:inputType="number"
         android:ems="10"/>
 

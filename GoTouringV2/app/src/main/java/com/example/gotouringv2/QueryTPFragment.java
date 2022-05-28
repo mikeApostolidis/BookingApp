@@ -15,6 +15,7 @@ import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemSelectedListener;
 import android.view.View.OnClickListener;
 
+import com.example.gotouringv2.Entities.ResultStringInt;
 import com.example.gotouringv2.Entities.TravelAgency;
 import com.example.gotouringv2.Entities.TravelPackage;
 
@@ -87,7 +88,7 @@ public class QueryTPFragment extends Fragment {
 
 
 
-        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
+   /*     spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener(){
            public void onItemSelected(AdapterView<?> parent, View view, int position, long id){
 
                temp=position+1;
@@ -111,27 +112,28 @@ public class QueryTPFragment extends Fragment {
                             int tripId = i.getTripId();
                             String departureDate = i.getDepartureDate();
                             double packagePrice = i.getPrice();
-                            result = result + "\nPackage Id: " + code + "\nAgency Id: " + tripId + "\nTrip  Id: " + AgencyId + "\n" +
+                            result = result + "\nPackage Id: " + code + "\nAgency Id: " + AgencyId + "\nTrip  Id: " + tripId + "\n" +
                                     "Departure Date: " + departureDate + "\nPackage Price: " + packagePrice + "\n";
                         }
                         txtquery3.setText(result);
                         break;
 
                     case 2:
-                        //List<TravelPackage> travelPackage = MainActivity.travelGuideDatabase.travelGuideDao().getTravelPackages();
-                        List<Integer> integers = MainActivity.travelGuideDatabase.travelGuideDao().getQueryMostAgencies();
-                        for(Integer i: integers)
+                        List<ResultStringInt> resultStringInts5 = MainActivity.travelGuideDatabase.travelGuideDao().getDate();
+                        for(ResultStringInt i: resultStringInts5)
                         {
-                            result = result + "\n Most famous Agency "+ i +"\n";
+
+                          result = result + "\n ID's of Agencies "+ i +"\n";
                         }
+                       // txtquery3.setText("dokimi");
                         txtquery3.setText(result);
                         break;
                     case 3:
                         //List<TravelPackage> travelPackage = MainActivity.travelGuideDatabase.travelGuideDao().getTravelPackages();
-                        List<Integer> integers1 = MainActivity.travelGuideDatabase.travelGuideDao().getQueryMostPickedTrip();
-                        for(Integer i: integers1)
+                        List<Integer> integers2 = MainActivity.travelGuideDatabase.travelGuideDao().getQueryMostAgencies();
+                        for(Integer i: integers2)
                         {
-                            result = result + "\n Most Trip "+ i +"\n";
+                            result = result + "\n Most Agency "+ i +"\n";
                         }
                         txtquery3.setText(result);
                         break;
@@ -140,14 +142,16 @@ public class QueryTPFragment extends Fragment {
                         List<Double> doubles = MainActivity.travelGuideDatabase.travelGuideDao().getQueryCheapestTrip();
                         for(Double i: doubles)
                         {
-                            result = result + "\n Least expensive Trip "+ i +"\n";
+                            result = result + "\n Trip Cost  "+ i +"€\n";
                         }
                         txtquery3.setText(result);
                         break;
 
                 }
             }
-        });
+        });*/
         return view;
-    }
+   }
+
+
 }

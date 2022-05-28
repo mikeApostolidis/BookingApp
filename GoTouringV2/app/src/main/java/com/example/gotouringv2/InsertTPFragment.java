@@ -85,7 +85,6 @@ public class InsertTPFragment extends Fragment {
                 } catch (NumberFormatException ex) {
                     System.out.println("Could not parse " + ex);
                 }
-       //alaksa agency me trip
 
                 int  Agency_Id = 0;
                 try {
@@ -127,8 +126,8 @@ public class InsertTPFragment extends Fragment {
 
 
                 editTextINSTP1.setText("");
-                editTextINSTP3.setText("");
                 editTextINSTP2.setText("");
+                editTextINSTP3.setText("");
                 editTextINSTP4.setText("");
                 editTextINSTP5.setText("");
             }
