@@ -137,8 +137,17 @@ public class UpdateCustomerFragment extends Fragment {
 
                 //klhsh ths methodou update
                 UpdateData(var_oldName,var_oldSurname,var_old_travelpackageid,Customer);
-                //DeleteData(var_oldName,var_oldSurname);
 
+                oldName.setText("");
+                oldSurname.setText("");
+                oldTravelPackageId.setText("");
+
+
+                newName.setText("");
+                newSurname.setText("");
+                newAge.setText("");
+                newHotel.setText("");
+                newTravelPackageId.setText("");
             }
         });
         returnBtn.setOnClickListener(new View.OnClickListener() {
@@ -161,7 +170,6 @@ public class UpdateCustomerFragment extends Fragment {
             @Override
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
 
-//&& !task.getResult().isEmpty()
                 if(task.isSuccessful()&& !task.getResult().isEmpty() ){
                     DocumentSnapshot documentSnapshot=task.getResult().getDocuments().get(0);
                     String documentID=documentSnapshot.getId();
