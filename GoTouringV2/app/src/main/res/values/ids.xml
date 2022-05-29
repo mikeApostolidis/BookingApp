@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="updateCustomer" type="id"/>
+    <item name="old_travel_package" type="id"/>
+    <item name="old_Customer_surname" type="id"/>
+    <item name="old_Customer_name" type="id"/>
+</resources>

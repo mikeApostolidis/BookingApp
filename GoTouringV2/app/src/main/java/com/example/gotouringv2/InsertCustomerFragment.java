@@ -30,7 +30,7 @@ import java.util.Map;
  */
 public class InsertCustomerFragment extends Fragment {
     EditText name,surname,age,hotel,TravelPackageId;
-    Button insert;
+    Button insert,returnBtn;
     FirebaseFirestore db;
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -81,8 +81,9 @@ public class InsertCustomerFragment extends Fragment {
         age = view.findViewById(R.id.Customer_age);
         hotel = view.findViewById(R.id.hotel);
         TravelPackageId = view.findViewById(R.id.travel_package);
-        // Inflate the layout for this fragment
+
         insert = view.findViewById(R.id.submitCustomer);
+        returnBtn=view.findViewById(R.id.Back_to_manager);
         db=FirebaseFirestore.getInstance();
         insert.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -132,6 +133,12 @@ public class InsertCustomerFragment extends Fragment {
                 hotel.setText("");
                 age.setText("");
                 TravelPackageId.setText("");
+            }
+        });
+        returnBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, new CustomerManageFragment()).addToBackStack(null).commit();
             }
         });
         return view;

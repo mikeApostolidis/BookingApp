@@ -152,7 +152,7 @@ public class MainActivity extends AppCompatActivity {
                         return true; */
                     case R.id.nav_Customer_management:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new CustomerManageFragment()).addToBackStack(null).commit();
-                        displayMessage("open query Travel Info");
+                        displayMessage("open Customers Manager");
                         drawerLayout.closeDrawers();
                         return true;
                 }
