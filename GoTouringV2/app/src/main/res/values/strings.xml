@@ -1,9 +1,10 @@
 <resources>
 
 
-    <string-array name="querriesTA_array">
-    <item>Show all</item>
-    <item>Show the id of Agencies that start from "J"</item>
+    <string-array name="spinner_menu">
+    <item>Travel Agency</item>
+    <item>Trip Info</item>
+    <item>Travel Package</item>
     </string-array>
 
 

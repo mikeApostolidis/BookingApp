@@ -7,15 +7,9 @@
 
 
     <item
-        android:id="@+id/navigation_drawer_item3"
-        android:icon="@android:drawable/ic_menu_share"
-        android:title=""
-        app:actionLayout="@layout/spinner"/>
-
-    <item
-        android:id="@+id/nav_home"
-        android:title="Home"
-        android:icon="@drawable/ic_baseline_home_24" />
+        android:id="@+id/nav_queryTA"
+        android:title="Data and Queries"
+        android:icon="@drawable/ic_baseline_home_24"/>
 
     <item
         android:id="@+id/nav_insertTA"
@@ -26,10 +20,7 @@
         android:title="Update Travel Agency"
         android:icon="@drawable/ic_baseline_update_24"/>
 
-    <item
-        android:id="@+id/nav_queryTA"
-        android:title="Data and Queries"
-        android:icon="@drawable/ic_baseline_remove_red_eye_24"/>
+
     <item
         android:id="@+id/nav_deleteTA"
         android:title="Delete Travel Agency"

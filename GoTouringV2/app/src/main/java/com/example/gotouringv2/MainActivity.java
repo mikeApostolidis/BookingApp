@@ -1,6 +1,8 @@
 package com.example.gotouringv2;
 
 import android.app.FragmentManager;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import androidx.annotation.NonNull;
@@ -40,10 +42,11 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+        QueryFragment queryFragment2 = new QueryFragment();
         //dimiourgia me fragmentmanager kai gemisma me home fragment
-        HomeFragment homeFragment = new HomeFragment();
+     //   HomeFragment homeFragment = new HomeFragment();
         //        CustomerManageFragment cm=new CustomerManageFragment();
-        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, homeFragment).commit();
+        getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, queryFragment2).commit();
         //getSupportFragmentManager().beginTransaction().add(R.id.fragment_container, cm).commit();
 
 
@@ -68,12 +71,20 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()){
-                    case R.id.nav_home:
+
+
+                    case R.id.nav_queryTA:
+                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QueryFragment()).addToBackStack(null).commit();
+                        displayMessage("open query Travel Agency");
+                        drawerLayout.closeDrawers();
+                        return true;
+
+        /*            case R.id.nav_home:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new HomeFragment()).addToBackStack(null).commit();
                         menuItem.setChecked(true);
                         displayMessage("open home");
                         drawerLayout.closeDrawers();
-                        return true;
+                        return true; */
 
                     case R.id.nav_insertTA:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new InsertFragment()).addToBackStack(null).commit();
@@ -133,11 +144,7 @@ public class MainActivity extends AppCompatActivity {
                         drawerLayout.closeDrawers();
                         return true;
 
-                    case R.id.nav_queryTA:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QueryFragment()).addToBackStack(null).commit();
-                        displayMessage("open query Travel Agency");
-                        drawerLayout.closeDrawers();
-                        return true;
+
 //pleon monop ena query xreiazetai alla ta afinw se comments just in case
              /*       case R.id.nav_queryTP:
                         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container, new QueryTPFragment()).addToBackStack(null).commit();
