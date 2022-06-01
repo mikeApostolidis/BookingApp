@@ -4,7 +4,10 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Github projects/BookingApp/GoTouringV2/app/src/main/res/drawable/ic_baseline_hotel_24.xml" value="0.1025" />
+        <entry key="..\:/Github projects/BookingApp/GoTouringV2/app/src/main/res/layout-land/fragment_customer_manage.xml" value="0.18" />
+        <entry key="..\:/Github projects/BookingApp/GoTouringV2/app/src/main/res/layout-land/fragment_delete.xml" value="0.15" />
         <entry key="..\:/Github projects/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_customer_manage.xml" value="0.1" />
+        <entry key="..\:/Github projects/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_delete.xml" value="0.1" />
         <entry key="..\:/Github projects/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_delete_customer.xml" value="0.1" />
         <entry key="..\:/Github projects/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_get_all_customers.xml" value="0.14" />
         <entry key="..\:/Github projects/BookingApp/GoTouringV2/app/src/main/res/layout/fragment_insert_customer.xml" value="0.25" />
