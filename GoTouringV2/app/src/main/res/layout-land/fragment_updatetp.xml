@@ -1,42 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".InsertTPFragment">
-
+    tools:context=".UpdateTPFragment">
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="32dp"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="24dp"
-        android:text="INSERT TRAVEL PACKAGE"
+        android:layout_margin="0dp"
+        android:text="UPDATE TRAVEL PACKAGE"
         android:textAlignment="center"
-        android:textSize="24dp"
+        android:textSize="15dp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/editTextINSTP1"
+        android:id="@+id/upeditTextTP1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Id"
+        android:hint="insert Id"
         android:inputType="number" />
 
-
     <EditText
-        android:id="@+id/editTextINSTP2"
+        android:id="@+id/upeditTextTP2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Insert Agency id"
+        android:hint="Insert Agency Id"
         android:inputType="number" />
 
     <EditText
-        android:id="@+id/editTextINSTP3"
+        android:id="@+id/upeditTextTP3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -45,15 +44,15 @@
 
 
     <EditText
-        android:id="@+id/editTextINSTP4"
+        android:id="@+id/upeditTextTP4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Insert Departure Date"
-        android:inputType="date" />
+        android:inputType="datetime" />
 
     <EditText
-        android:id="@+id/editTextINSTP5"
+        android:id="@+id/upeditTextTP5"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -61,10 +60,12 @@
         android:inputType="numberDecimal" />
 
     <Button
-        android:id="@+id/submituser2"
+        android:id="@+id/updateuser2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Submit" />
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="0dp"
+        android:baselineAligned="false"
+        android:text="UPDATE" />
 
 </LinearLayout>
-

@@ -1,52 +1,70 @@
-<?xml version="1.0" encoding="UTF-8"?>
-
+<?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UpdateFragment">
+    tools:context=".InsertTPFragment">
+
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_margin="24dp"
-        android:text="UPDATE TRAVEL AGENCY"
+        android:layout_margin="0dp"
+        android:text="INSERT TRAVEL PACKAGE"
         android:textAlignment="center"
         android:textSize="24dp"
         android:textStyle="bold" />
 
     <EditText
-        android:id="@+id/upeditText1"
+        android:id="@+id/editTextINSTP1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="insert Id"
+        android:hint="Id"
+        android:inputType="number" />
+
+
+    <EditText
+        android:id="@+id/editTextINSTP2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Insert Agency id"
         android:inputType="number" />
 
     <EditText
-        android:id="@+id/upeditText2"
+        android:id="@+id/editTextINSTP3"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Insert Travel Agency Name" />
+        android:hint="Insert Trip Id"
+        android:inputType="number" />
+
 
     <EditText
-        android:id="@+id/upeditText3"
+        android:id="@+id/editTextINSTP4"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="Insert Travel Agency Address"
-        android:inputType="textPersonName" />
+        android:hint="Insert Departure Date"
+        android:inputType="date" />
+
+    <EditText
+        android:id="@+id/editTextINSTP5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Insert Package Price"
+        android:inputType="numberDecimal" />
 
     <Button
-        android:id="@+id/updateuser"
+        android:id="@+id/submituser2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="40dp"
-        android:text="UPDATE" />
+        android:text="Submit" />
 
 </LinearLayout>
+

@@ -25,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
     //metavliti tipou klasis travelguidedatabase
     public static TravelGuideDatabase travelGuideDatabase;
 
+
+
+
+
+
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -167,6 +174,10 @@ public class MainActivity extends AppCompatActivity {
             }
         });
         }
+
+
+
+
     void displayMessage(String message){
         Toast.makeText(this, message, Toast.LENGTH_LONG).show();
     }
