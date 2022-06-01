@@ -2,9 +2,9 @@
 
 
     <string-array name="spinner_menu">
-    <item>Travel Agency</item>
-    <item>Trip Info</item>
-    <item>Travel Package</item>
+        <item>Travel Agency</item>
+        <item>Trip Info</item>
+        <item>Travel Package</item>
     </string-array>
 
 
@@ -24,13 +24,13 @@
 
     </string-array>
 
-<string-array name="customer_querries_array">
-    <item>Show all Customers</item>
-    <item>Show all Customers over the age of 30</item>
-    <item>Count Customers whose name starts with A</item>
-    <item>Show customers that visited the Hotel with name Grand Hotel and their age is less than 30</item>
+    <string-array name="customer_querries_array">
+        <item>Show all Customers</item>
+        <item>Show all Customers over the age of 30</item>
+        <item>Count Customers whose name starts with A</item>
+        <item>Show customers that visited the Hotel with name Grand Hotel and their age is less than 30</item>
 
-</string-array>
+    </string-array>
 
     <string name="app_name">GoTouringV2</string>
     <string name="nav_open">Open</string>

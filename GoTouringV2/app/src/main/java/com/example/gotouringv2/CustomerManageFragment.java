@@ -77,7 +77,8 @@ public class CustomerManageFragment extends Fragment implements View.OnClickList
                 getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, new DeleteCustomerFragment()).addToBackStack(null).commit();
                 break;
             case R.id.updateButton:
-                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, new UpdateCustomerFragment()).addToBackStack(null).commit();
+//                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, new UpdateCustomerFragment()).addToBackStack(null).commit();
+                getParentFragmentManager().beginTransaction().replace(R.id.fragment_container, new GetPositionOfTrip()).addToBackStack(null).commit();
             break;
         }
     }

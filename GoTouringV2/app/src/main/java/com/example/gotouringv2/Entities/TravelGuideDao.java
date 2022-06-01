@@ -47,7 +47,6 @@ public interface TravelGuideDao {
     @Query("select * from travelpackage")
     public List<TravelPackage> getTravelPackages();
 
-
 //Vres ton agent pou tha exei mono plane kai oxi bus LEITOURGEI
 //MIN KSEXASIS NA DIMIOURGISEIS AGENT POU NA EXEI TAKSIDEPSI KAI ME AEROPLANO KAI ME LEOFORIO
     @Query(" select TA.TravelAgency_name " +
